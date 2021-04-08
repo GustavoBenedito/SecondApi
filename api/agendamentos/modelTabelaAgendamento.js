@@ -2,7 +2,7 @@ const Sequelize = require('sequelize');
 const instanciadb = require('../db');
 
 const columns = {
-    nobe_cliente: {
+    nome_cliente: {
         type: Sequelize.STRING,
         allowNull:false
     },
