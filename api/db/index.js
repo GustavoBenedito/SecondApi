@@ -1,4 +1,4 @@
-const Sequelize = require("sequelize");
+const Sequelize = require('sequelize');
 const config = require('config');
 
 const instancia = new Sequelize(
@@ -8,7 +8,8 @@ const instancia = new Sequelize(
     {
         host:config.get('mysql.host'),
         port:config.get('mysql.port'),
-        dialect:'mysql'
+        dialect: 'mysql'
     }
 );
+
 module.exports = instancia;

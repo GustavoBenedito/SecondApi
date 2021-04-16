@@ -1,21 +1,21 @@
 const Sequelize = require('sequelize');
-const instanciadb = require('../db');
+const instanciadb = require('../db')
 
 const columns = {
     nome_cliente: {
         type: Sequelize.STRING,
-        allowNull:false
+        allowNull: false
     },
-    nome_servico:{
+    nome_servico: {
         type: Sequelize.STRING,
         allowNull: false
     },
     status: {
-        type: Sequelize.ENUM('agendado','cancelado'),
+        type: Sequelize.ENUM('agendado', 'cancelado'),
         allowNull: false
     },
-    data_agendamento:{
-        type:Sequelize.DATE,
+    data_agendamento: {
+        type: Sequelize.DATE,
         allowNull: false
     }
 }
@@ -24,7 +24,7 @@ const sequelizeOptions = {
     freezeTableName: true,
     tableName: "agendamento",
     timestamps: true,
-    createAt: 'data_criacao',
+    createdAt: 'data_criacao',
     updatedAt: 'data_atualizacao'
 }
 
